@@ -1,0 +1,16 @@
+[project]
+name = "example"
+version = "0.0.1"
+
+[build-system]
+requires = ["scikit-build-core"]
+build-backend = "scikit_build_core.build"
+
+[project.optional-dependencies]
+dev = [
+  "cmake==3.26.1",
+  "auditwheel"
+]
+all = [
+  "example[dev]"
+]
